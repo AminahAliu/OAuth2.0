@@ -24,7 +24,7 @@ APPLICATION_NAME = "Restaurant Menu Application"
 
 
 # Connect to Database and create database session
-engine = create_engine('sqlite:///restaurantmenu.db')
+engine = create_engine('sqlite:///restaurantmenu.db?check_same_thread=false')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
